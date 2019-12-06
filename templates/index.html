@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>知了</title>
+</head>
+<body>
+    这是从模板中渲染的
+    <p><a href="{{ url_for('login') }}">登录</a></p>
+{#    <p>{{ number|abs }}</p>#}
+    <p>{{ position|abs }}</p>
+    <p>个性签名：{{ signature|default('什么都没有', boolean=True) }}</p>
+<p>
+    {{ signature|escape }}
+    {% autoescape on %}
+    {% endautoescape %}
+    <p>{{ name[0] }}</p>
+    <p>人--数：{{ name|length }}</p>
+    <p>{{ article|cut }}</p>
+    <p>create_time:{{ create_time|handle_time }}</p>
+</p>
+</body>
+</html>
+
